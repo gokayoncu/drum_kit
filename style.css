@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1f242d;
+    
+}
+
+header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 1rem 0 2rem 0;
+    font-size: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+header h1{    
+    position: relative;
+    color: #1f242d;
+    text-transform: uppercase;
+    
+}
+
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: cadetblue;
+    border-right: 2px solid cadetblue;
+    overflow: hidden;
+    animation: animate 4s linear backwards infinite;
+
+}
+
+@keyframes animate {
+    0%,10%,100%{
+        width: 0;
+        
+    }
+    70%,90%{
+        width: 100%;
+        
+    }    
+}
+
+.drums{
+    text-align: center;
+    height: 475px;
+}
+.drums img{
+    width: 50vw;
+    height: 60vh;
+    position: relative;
+}
+.baget{
+    display: flex;
+    position: absolute;
+    top: -27rem;
+    left: 45rem ;
+    
+}
+.bagetClip{
+    animation: baget 0.75s linear backwards infinite ;
+}
+.baget2{
+    display: flex;
+    position: absolute;
+    top: -32rem;
+    left: 48rem ;    
+}
+
+.baget2Clip{
+    animation: baget2 0.5s linear backwards infinite ;
+}
+
+.btn{
+    text-align: center;
+}
+.btn div{
+    display: inline-block;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.btn div button:active{
+    background-color: rgb(110, 47, 169);
+    box-shadow:0 0 2rem aqua;
+    
+}
+
+.key{    
+    background-color: rgb(71, 12, 133);
+    width: 3rem;
+    height: 3rem;
+    margin: 0px 1rem 0px 1rem;
+    border: 0px  0px 0.5px 0.5px solid;
+    border-radius: 50%;
+    font-size: 1rem;
+    
+}
+
+.playing{
+    background-color:rgb(110, 47, 169) ;
+    transform: scale(1.1);
+    border-color: aqua;
+    box-shadow :0 0 1rem aqua;
+    
+}
+
+@keyframes baget {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(-90deg)}
+  }
+
+  @keyframes baget2 {
+    0%{transform:rotateX(0deg)}
+    100%{transform:rotateX(120deg)}
+  }
