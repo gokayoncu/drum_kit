@@ -63,7 +63,7 @@ h1::before{
     
 }
 .bagetClip{
-    animation: baget 0.75s linear backwards infinite ;
+    animation: baget 0.75s linear backwards  ;
 }
 .baget2{
     display: flex;
@@ -73,7 +73,7 @@ h1::before{
 }
 
 .baget2Clip{
-    animation: baget2 0.5s linear backwards infinite ;
+    animation: baget2 0.5s linear backwards  ;
 }
 
 .btn{
