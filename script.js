@@ -9,6 +9,8 @@ let btnK = document.getElementById(`k`);
 let btnL = document.getElementById(`l`);
 let png1 = document.getElementById(`png1`);
 let png2 = document.getElementById(`png2`);
+let div = document.querySelector(".empty");
+
 
 
 
@@ -22,33 +24,42 @@ let snare= new Audio("document/snare.wav");
 let tink= new Audio("document/tink.wav");
 let tom= new Audio("document/tom.wav");
 
-btnA.addEventListener( "click" , function(){
-        playAudio(boom);        
+
+div.addEventListener( "click", function (event) { 
+    const newId = event.target.id;
+    switch (newId) {
+        case "a":
+            playAudio(boom);
+        case "s":
+            playAudio(clap);
+            break;
+        case "d":
+            playAudio(hihat);
+            break;
+        case "f":
+            playAudio(kick);
+            break;
+        case "g":
+            playAudio(openhat);
+            break;
+        case "h":
+            playAudio(ride);
+            break;
+        case "j":
+            playAudio(snare);
+            break;
+        case "k":
+            playAudio(tink);
+            break;
+        case "l":
+            playAudio(tom);
+            break;
+        default:
+            break;
+    }
 });
-btnS.addEventListener( "click" , function(){
-        playAudio(clap);
-});
-btnD.addEventListener( "click" , function(){
-        playAudio(hihat);
-});
-btnF.addEventListener( "click" , function(){
-        playAudio(kick);
-});
-btnG.addEventListener( "click" , function(){
-        playAudio(openhat);
-});
-btnH.addEventListener( "click" , function(){
-        playAudio(ride);
-});
-btnJ.addEventListener( "click" , function(){
-        playAudio(snare);
-});
-btnK.addEventListener( "click" , function(){
-        playAudio(tink);
-});
-btnL.addEventListener( "click" , function(){
-        playAudio(tom);
-});
+
+
 
 document.addEventListener("keydown", function ( e ) {
     
